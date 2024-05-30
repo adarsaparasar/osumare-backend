@@ -69,16 +69,16 @@ node server.js`
 ## API CHECKING WITH CURL
 
 1. Create a Task:
-- `curl -X POST http://localhost:3000/tasks -H "Content-Type: application/json" -d '{"title": "Sample Task", "description": "This is a sample task."}'`
+- `curl -X POST http://localhost:8080/tasks -H "Content-Type: application/json" -d '{"title": "Sample Task", "description": "This is a sample task."}'`
 
 2. Get All Tasks:
--`curl http://localhost:3000/tasks`
+-`curl http://localhost:8080/tasks`
 
 3. Get a Task by ID:
--`curl http://localhost:3000/tasks/1`
+-`curl http://localhost:8080/tasks/1`
 
 4. Update a Task:
--`curl -X PUT http://localhost:3000/tasks/1 -H "Content-Type: application/json" -d '{"title": "Updated Task", "description": "This is an updated task."}'`
+-`curl -X PUT http://localhost:8080/tasks/1 -H "Content-Type: application/json" -d '{"title": "Updated Task", "description": "This is an updated task."}'`
 
 5. Delete a Task:
--`curl -X DELETE http://localhost:3000/tasks/1`
+-`curl -X DELETE http://localhost:8080/tasks/1`
