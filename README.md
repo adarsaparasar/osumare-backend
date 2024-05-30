@@ -38,29 +38,47 @@ node server.js`
 
 ## API Endpoints
 
-GET /tasks
+1. GET /tasks
 
-Retrieves a list of all tasks.
-Response: `[{ id: 1, Title: "Task Title", Description: "Task Description" }, ...]`
+-Retrieves a list of all tasks.
+-Response: `[{ id: 1, Title: "Task Title", Description: "Task Description" }, ...]`
 
-GET /tasks/id
+2.  GET /tasks/id
 
-Retrieves a specific task by ID.
-Response: `{ id: 1, Title: "Task Title", Description: "Task Description" }`
+-Retrieves a specific task by ID.
+-Response: `{ id: 1, Title: "Task Title", Description: "Task Description" }`
 
-POST /tasks
+3. POST /tasks
 
-Creates a new task.
-Request Body:` { Title: "Task Title", Description: "Task Description" }`
-Response: `{ id: 1, Title: "Task Title", Description: "Task Description" }`
+-Creates a new task.
+-Request Body:` { Title: "Task Title", Description: "Task Description" }`
+-Response: `{ id: 1, Title: "Task Title", Description: "Task Description" }`
 
-PUT /tasks/
+4. PUT /tasks/
 
-Updates an existing task by ID.
-Request Body:`{ Title: "Updated Title", Description: "Updated Description" }`
-Response: `{ id: 1, Title: "Updated Title", Description: "Updated Description" }`
+-Updates an existing task by ID.
+-Request Body:`{ Title: "Updated Title", Description: "Updated Description" }`
+-Response: `{ id: 1, Title: "Updated Title", Description: "Updated Description" }`
 
-DELETE /tasks/
+5. DELETE /tasks/
 
-Deletes a task by ID.
-Response: `[{ id: 1, Title: "Deleted Title", Description: "Deleted Description" }]`
+-Deletes a task by ID.
+-Response: `[{ id: 1, Title: "Deleted Title", Description: "Deleted Description" }]`
+
+
+## API CHECKING WITH CURL
+
+1. Create a Task:
+`curl -X POST http://localhost:3000/tasks -H "Content-Type: application/json" -d '{"title": "Sample Task", "description": "This is a sample task."}'`
+
+2. Get All Tasks:
+`curl http://localhost:3000/tasks`
+
+3. Get a Task by ID:
+`curl http://localhost:3000/tasks/1`
+
+4. Update a Task:
+`curl -X PUT http://localhost:3000/tasks/1 -H "Content-Type: application/json" -d '{"title": "Updated Task", "description": "This is an updated task."}'`
+
+5. Delete a Task:
+`curl -X DELETE http://localhost:3000/tasks/1`
